@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Időzónák</title>
+</head>
+<body>
+    <script>
+        getData();
+        async function getData(){
+        const leker = await fetch('./ZonAnn.Ts+dSST.csv');
+        const adatok = await leker.text();
+        console.log(adatok);
+        
+        const rows=adatok.split('\n').slice(1);
+        let table='<table>';
+        rows.forEach(row=>{
+            let sor = row.split(',');
+            table +='<tr>';
+            for(let i=0; i<sor.length; i++){
+                table+=
+            }
+            console.log(rows);
+        });
+        }
+    </script>
+</body>
+</html>
